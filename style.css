@@ -231,7 +231,12 @@ img, picture, canvas, svg {
     background-color: #fff;
 }
 .art-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url(img/png/Repair01.png);
     position: relative;
+    min-height: 434px;
     margin-left: 220px;
     margin-right: 218px;
     transform: translateY(-50%);
@@ -255,6 +260,10 @@ img, picture, canvas, svg {
     margin-left: 196px;
     margin-right: 177px;
     transform: translateY(-50%);
+}
+.box-item {
+    position: absolute;
+    cursor: pointer;
 }
 .promo-card-box {
     position: absolute;
@@ -614,7 +623,7 @@ img, picture, canvas, svg {
 .side-img.two {
     transform: translate(20px, -12px);
 }
-.box-svg {
+/*.box-svg {
     content: "";
     position: absolute;
     left: 340px;
@@ -626,7 +635,7 @@ img, picture, canvas, svg {
 }
 .box-svg.two {
     left: 860px;
-}
+}*/
 .smbl-ico {
     margin: 0 auto;
     padding-bottom: 36px;
@@ -718,6 +727,10 @@ img, picture, canvas, svg {
     .promo-card {
         margin: 0 auto;
     }
+    .art-box {
+        min-height: 344px;
+        transform: translateY(0%);
+    }
     .iso-box.cover_one {
         display: block;
         margin-top: 36px;
@@ -731,7 +744,7 @@ img, picture, canvas, svg {
         transform: translateY(-50%);
     }
     .entry-form__register.black-two {
-        padding-left: 480px;
+        padding-left: 360px;
     }
     .entry-form__registry.white {
         display: grid;
@@ -751,10 +764,6 @@ img, picture, canvas, svg {
     .item-svg {
         display: none;
     }
-    .box-svg {
-        left: 560px;
-        transform: translateY(-220px);
-    }
     .smbl-ico {
         padding-top: 66px;
         padding-bottom: 46px;
@@ -763,7 +772,16 @@ img, picture, canvas, svg {
         display: none;
     }
 }
-@media (max-width:768px) {
+@media (max-width:920px) {
+    .entry-form__register.black-two {
+        padding-left: 240px;
+    }
+    .art-box {
+        margin-left: 100px;
+        margin-right: 100px;
+    }
+}
+@media (max-width:767px) {
     .content-submit {
         display: grid;
         gap: 26px;
@@ -771,35 +789,29 @@ img, picture, canvas, svg {
     .entry-form__field-white {
         flex-basis: 340px;
     }
-    .art-box_cover {
-        content: url(img/png/Repair03.png);
-        padding-left: 180px;
-    }
     .intro-box {
         padding-left: 24px;
     }
     .iso-box.two {
         padding-left: 220px;
     }
+    .art-box {
+        min-height: 207px;
+        margin-left: 80px;
+        margin-right: 80px;
+    }
     .under-title.one.white {
         padding-left: 0%;
     }
     .entry-form__register.black-two {
-        padding-left: 240px;
+        padding-left: 120px;
     }
     .entry-form__registry.white {
-       display: flex;
+        display: flex;
     }
     .box-png.two {
         padding-top: 46px;
         padding-left: 200px;
-    }
-    .box-svg.two {
-        left: 620px;
-        transform: translateY(-220px);
-    }
-    .box-svg.one {
-        left: 120px;
     }
     .backing {
         display: block;
@@ -821,9 +833,9 @@ img, picture, canvas, svg {
     .promo-cards__wrap {
         padding-left: 16px;
     }
-    .art-box_cover {
-        max-width: 340px;
-        padding-left: 20px;
+    .art-box {
+        margin-left: 20px;
+        margin-right: 20px;
     }
     .under-title.iso {
         padding-left: 10px;
@@ -832,13 +844,5 @@ img, picture, canvas, svg {
     .box-png.two {
         max-width: 340px;
         padding-left: 0%;
-    }
-    .box-svg.two {
-        left: 300px;
-        transform: translateY(-140px);
-    }
-    .box-svg.one {
-        left: 20px;
-        transform: translateY(-140px);
     }
 }
